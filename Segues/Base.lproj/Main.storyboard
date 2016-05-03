@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Segues" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztc-nD-jte">
+                                <rect key="frame" x="234" y="143" width="133" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Go To Black">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadBlack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5g2-TR-Ik5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vy-Na-MTu">
+                                <rect key="frame" x="229" y="268" width="143" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Go To Yellow">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadYellow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JvN-44-zRw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Vy-Na-MTu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CLH-vt-CKW"/>
+                            <constraint firstItem="Ztc-nD-jte" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="123" id="f4W-5g-9OB"/>
+                            <constraint firstItem="0Vy-Na-MTu" firstAttribute="top" secondItem="Ztc-nD-jte" secondAttribute="bottom" constant="83" id="vkI-aU-t2r"/>
+                            <constraint firstItem="Ztc-nD-jte" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xHE-97-aR3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="Eez-aE-WHw" kind="show" identifier="goToBlack" id="PY2-P7-mzd"/>
+                        <segue destination="YyT-ne-ywP" kind="show" identifier="goToYellow" id="NsB-jF-HV3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zlz-Y3-axp">
+            <objects>
+                <viewController id="YyT-ne-ywP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oiP-df-apk"/>
+                        <viewControllerLayoutGuide type="bottom" id="CIG-Fz-3sm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eKU-GX-ZVP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97023671865463257" green="0.95639234781265259" blue="0.051906608045101166" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IS1-0M-KEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="214" y="1069"/>
+        </scene>
+        <!--Black View Controller-->
+        <scene sceneID="yac-oS-Ybu">
+            <objects>
+                <viewController id="Eez-aE-WHw" customClass="BlackViewController" customModule="Segues" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KNa-ao-a3C"/>
+                        <viewControllerLayoutGuide type="bottom" id="jw7-TY-N15"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EpZ-4u-juo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyh-h7-D0w">
+                                <rect key="frame" x="173" y="125" width="255" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="1Zp-4A-FKh"/>
+                                    <constraint firstAttribute="width" constant="255" id="gs7-iP-Svx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jyh-h7-D0w" firstAttribute="top" secondItem="KNa-ao-a3C" secondAttribute="bottom" constant="105" id="Heh-DA-yGh"/>
+                            <constraint firstItem="Jyh-h7-D0w" firstAttribute="centerX" secondItem="EpZ-4u-juo" secondAttribute="centerX" id="vr0-cZ-3EA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainLbl" destination="Jyh-h7-D0w" id="PSE-ek-V6x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1NF-Je-ZAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936" y="305"/>
+        </scene>
+    </scenes>
+</document>
